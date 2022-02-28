@@ -1,0 +1,16 @@
+---
+framework: jest
+preRun:
+     command:
+        - yarn install
+        - yarn run build
+preMerge:
+  pattern:
+    - "test/test_selector.ts"
+postMerge:
+  pattern: 
+    - "test/test_selector.ts"
+postRun:
+     command:
+        - yarn --version
+version: 1.0
