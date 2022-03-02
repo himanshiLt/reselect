@@ -158,6 +158,20 @@ describe('Basic selector behavior', () => {
     expect(selector(state2)).toEqual({ a: 2 })
     expect(selector.recomputations()).toBe(2)
   })
+  
+  test('new. memoized composite arguments', () => {
+    const selector = createSelector(
+      (state: StateSub) => state.sub,
+      sub => sub
+    )
+    const state1 = { sub: { a: 1 } }
+    expect(selector(state1)).toEqual({ a: 1 })
+    expect(selector(state1)).toEqual({ a: 1 })
+    expect(selector.recomputations()).toBe(1)
+    const state2 = { sub: { a: 2 } }
+    expect(selector(state2)).toEqual({ a: 2 })
+    expect(selector.recomputations()).toBe(2)
+  })
 
   test('first argument can be an array', () => {
     const selector = createSelector(
