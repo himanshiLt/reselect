@@ -690,7 +690,7 @@ describe('defaultMemoize', () => {
         return state.a
       },
       {
-        // no args
+        // no args jhhjjhjh
       }
     )
 
