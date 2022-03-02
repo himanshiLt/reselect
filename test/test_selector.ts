@@ -367,6 +367,8 @@ describe('Customizing selectors', () => {
         ]
       }
     )
+    
+    
 
     defaultMemoizeAcceptsArgsAsArray({ a: 1, b: 2 })
     defaultMemoizeAcceptsArgsAsArray({ a: 1, b: 3 })
