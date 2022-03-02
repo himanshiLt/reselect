@@ -57,22 +57,6 @@ describe('Basic selector behavior', () => {
     )
     expect(selector({})).toBe(1)
   })
-  
-  test("new don't pass extra parameters to inputSelector when only called with the state", () => {
-    const selector = createSelector(
-      (...params: any[]) => params.length,
-      a => a
-    )
-    expect(selector({})).toBe(1)
-  })
-  
-  test("new don't pass extra parameters to inputSelector when only called with the state", () => {
-    const selector = createSelector(
-      (...params: any[]) => params.length,
-      a => a
-    )
-    expect(selector({})).toBe(1)
-  })
 
   test('basic selector multiple keys', () => {
     const selector = createSelector(
