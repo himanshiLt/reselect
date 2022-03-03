@@ -58,6 +58,7 @@ describe('Basic selector behavior', () => {
     expect(selector({})).toBe(1)
   })
 
+  
   test('basic selector multiple keys', () => {
     const selector = createSelector(
       (state: StateAB) => state.a,
